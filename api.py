@@ -53,7 +53,7 @@ app = FastAPI()
 async def translate_text(api_key: str, text: str, retries: int = 5) -> str:
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(
-        "gemini-2.0-flash-lite-preview-02-05",
+        "gemini-2.0-flash-exp",
         system_instruction=prompt,
         safety_settings=safety
     )
